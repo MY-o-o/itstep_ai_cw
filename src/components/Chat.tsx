@@ -3,15 +3,19 @@
 import { useChat } from "@ai-sdk/react";
 import { useTranslations } from "next-intl";
 import { Send, Bot, User, Sparkles } from "lucide-react";
+import { useState } from "react";
 
 export function Chat() {
   const t = useTranslations("Chat");
-  const { messages, input, handleInputChange, handleSubmit, status } = useChat();
+  const { messages, sendMessage, status } = useChat();
+  const [input, setInput] = useState("");
   const isLoading = status === "submitted" || status === "streaming";
 
   const handleChatSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    handleSubmit(e);
+    if (!input.trim()) return;
+    sendMessage({ parts: [{ type: "text", text: input }] });
+    setInput("");
   };
 
   return (
@@ -87,7 +91,7 @@ export function Chat() {
               <input
                 className="w-full bg-black/5 dark:bg-white/5 border border-transparent focus:border-accent/50 outline-none rounded-xl py-4 pl-6 pr-14 transition-all duration-300 placeholder:text-muted-foreground/70"
                 value={input}
-                onChange={handleInputChange}
+                onChange={(e) => setInput(e.target.value)}
                 placeholder={t("placeholder")}
                 disabled={isLoading}
               />
