@@ -17,7 +17,7 @@ Always answer in the language the user asks.`;
   const result = await streamText({
     model: groq('llama-3.1-8b-instant'),
     system: systemPrompt,
-    messages: convertToModelMessages(messages),
+    messages: await convertToModelMessages(messages),
   });
 
   return result.toUIMessageStreamResponse();
