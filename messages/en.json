@@ -1,0 +1,53 @@
+{
+  "Navigation": {
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "chat": "AI Chat",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "greeting": "Hi, I'm",
+    "role": "Full Stack Developer & Tech Lead",
+    "tagline": "Building scalable web applications, mobile experiences, and AI solutions with exceptional aesthetics.",
+    "cta": "Discuss Project"
+  },
+  "About": {
+    "title": "About Me",
+    "experience": "Experience",
+    "technologies": "Key Technologies"
+  },
+  "Services": {
+    "title": "Services",
+    "web": {
+      "title": "Web Development",
+      "desc": "High-performance modern web apps with Next.js, React, and NestJS."
+    },
+    "mobile": {
+      "title": "Mobile Apps",
+      "desc": "Cross-platform mobile applications using React Native."
+    },
+    "ai": {
+      "title": "AI Solutions",
+      "desc": "Integrating LLMs and generative AI into existing workflows."
+    },
+    "automation": {
+      "title": "Automation & Architecture",
+      "desc": "Scalable cloud architectures and CI/CD pipelines."
+    }
+  },
+  "Portfolio": {
+    "title": "Featured Work"
+  },
+  "Chat": {
+    "title": "Ask my AI",
+    "placeholder": "Ask about my experience, skills, or rates...",
+    "send": "Send"
+  },
+  "Contact": {
+    "title": "Let's Connect",
+    "email": "Email",
+    "telegram": "Telegram",
+    "linkedin": "LinkedIn"
+  }
+}
